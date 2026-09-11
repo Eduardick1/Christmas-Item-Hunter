@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поиск предметов</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="./assets/css/game.css?v=670112534f2b">
+    <script type="module" src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <main class="app" data-ui="app">
+      <section data-screen="welcome">
+        <div class="welcome-hero">
+
+          <div class="welcome-content">
+            <div class="brands-logo">
+              <img src="./assets/img/brand-hero.svg" alt="">
+            </div>
+            <h1 class="welcome-title">
+              <img src="./assets/img/title.svg" alt="">
+            </h1>
+            <div class="scroll-down">
+              <img class="scroll-down-icon" src="./assets/img/scroll-chevron.svg" alt="Крутите вниз">
+              <p>Крутите вниз</p>
+            </div>
+          </div>
+        </div>
+        <div class="welcome_details">
+
+          <div class="welcome_details-content">
+            <p>На новогодней ярмарке такой наплыв посетителей,<br> что даже местный любимец, кот Снежок, решил помочь продавцам.<br> Но его слишком отвлекают коробки и подарочные ленточки…</p>
+            <div class="block block-desc">
+              <div>
+                <h2 class="welcome_details-title">Помогите Снежку</h2>
+                <p>Найдите нужные товары для&nbsp;покупателей, чтобы они быстрее подготовились к празднику, а пушистый консультант смог вернуться к своим кошачьим забавам!</p>
+              </div>
+              <div class="block-img">
+                <img src="./assets/img/cat-inbox.svg" alt="">
+              </div>
+            </div>
+            <h2>За помощь мы подарим вам бонусы для покупок</h2>
+            <div class="bonuses_wrapper">
+              <div class="block bonus-card ">
+                <h3 class="bonus-card__header">
+                  <img class="bonus-card__brand " src="./assets/img/logo-divan.svg" alt="divan.ru">
+                </h3>
+                <div class="bonus-card__programs">
+                  <div class="bonus-program">
+                    <p class="bonus-program__title">По программе лояльности</p>
+                    <ul class="bonus-program__levels">
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">1-й уровень</span>
+                        <span class="bonus-level__reward">500 бонусов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">2-й уровень</span>
+                        <span class="bonus-level__reward">1000 бонусов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">3-й уровень</span>
+                        <span class="bonus-level__reward">2000 бонусов</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block bonus-card ">
+                <h3 class="bonus-card__header">
+                  <img class="bonus-card__brand " src="./assets/img/logo-petrovich.svg" alt="Петрович">
+                </h3>
+                <div class="bonus-card__programs bonus-card__programs--compare">
+                  <div class="bonus-program">
+                    <p class="bonus-program__title">Клуб друзей</p>
+                    <ul class="bonus-program__levels">
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">1-й уровень</span>
+                        <span class="bonus-level__reward">50 баллов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">2-й уровень</span>
+                        <span class="bonus-level__reward">75 баллов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">3-й уровень</span>
+                        <span class="bonus-level__reward">100 баллов</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bonus-program-separator">
+                    <span>или</span>
+                    <span>или</span>
+                    <span>или</span>
+                  </div>
+                  <div class="bonus-program bonus-program--union">
+                    <p class="bonus-program__title">Союз Отважных</p>
+                    <ul class="bonus-program__levels">
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">1-й уровень</span>
+                        <span class="bonus-level__reward">10 000 бонусов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">2-й уровень</span>
+                        <span class="bonus-level__reward">15 000 бонусов</span>
+                      </li>
+                      <li class="bonus-level">
+                        <span class="bonus-level__name">3-й уровень</span>
+                        <span class="bonus-level__reward">20 000 бонусов</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn" type="button" data-ui="welcome-button" data-action="welcome-button">Начать игру</button>
+          </div>
+          <p class="notice">
+            <a href="#" target="_blank">Полные правила акции</a>
+          </p>
+        </div>
+      </section>
+
+      <section data-screen="instructions">
+        <div class="instructions-content">
+          <img class="instructions-img" src="./assets/img/cat-howtoplay.svg" alt="">
+          <div class="howtoplay_slider">
+            <ul data-ui="howtoplay-steps" class="howtoplay_steps">
+              <li class="howtoplay_step">
+                <img class="step-img--desc" src="./assets/img/icon_howtoplay-1.svg" alt="">
+                <img class="step-img--mob" src="./assets/img/icon_howtoplay-1--mob.svg" alt="">
+                <p class="step-text--desc">Для перемещения по карте <br> используйте мышь <br> или стрелки на клавиатуре.</p>
+                <p class="step-text--mob">Перемещайтесь по экрану,<br> чтобы исследовать <br> всё пространство.</p>
+              </li>
+              <li class="howtoplay_step">
+                <img class="step-img--desc" src="./assets/img/icon_howtoplay-2.svg" alt="">
+                <img class="step-img--mob" src="./assets/img/icon_howtoplay-2--mob.svg" alt="">
+                <p>Находите товары <br> из списков покупок <br> посетителей ярмарки.</p>
+              </li>
+              <li class="howtoplay_step">
+                <img src="./assets/img/icon_howtoplay-3.svg" alt="">
+                <p>Чем больше товаров <br> вы найдёте, тем интереснее выигрыш!</p>
+              </li>
+            </ul>
+          </div>
+          <div class="howtoplay_progress is-hidden" data-ui="howtoplay-progress">
+            <span class="howtoplay_progress-thumb"></span>
+          </div>
+          <button data-ui="instructions-button" data-action="instructions-button" type="button" class="btn">Старт</button>
+          <p data-ui="instructions-status" class="instructions-status is-hidden"></p>
+        </div>
+      </section>
+
+      <section data-screen="game" class="game-screen">
+        <div data-ui="map-viewport" class="map-viewport">
+        </div>
+
+        <header data-ui="game-hud" class="game-hud">
+          <div data-ui="game-progress" class="game-progress">
+            <img class="game-progress__cat" src="./assets/img/cat-progress.svg" width="74" height="38" alt="">
+            <div class="game-progress__track">
+              <div class="game-progress__fill"></div>
+              <div data-ui="game-progress-segments" class="game-progress__segments"></div>
+            </div>
+          </div>
+          <div data-ui="game-targets-region" class="game-targets-region">
+            <button data-ui="targets-button" data-action="targets-button" class="game-question" type="button">
+              <img src="./assets/img/icon-question.svg" width="60" height="60" alt="">
+            </button>
+            <section data-ui="targets-panel" class="game-targets game-notebook">
+              <h2 data-ui="targets-title"></h2>
+              <button data-ui="targets-close" data-action="targets-close" class="game-close" type="button"></button>
+              <ol data-ui="targets-list" class="game-goals"></ol>
+            </section>
+          </div>
+        </header>
+
+        <ul data-ui="item-list" class="game-items"></ul>
+        <div data-ui="game-overlay" class="game-overlay"></div>
+
+        <div class="game-panels">
+          <section data-ui="level-card" class="game-card game-level-card">
+            <h2 data-ui="level-title"></h2>
+            <div data-ui="level-story" class="game-level-story">
+              <p data-ui="level-description"></p>
+              <img data-ui="level-illustration" width="424" height="337" alt="">
+            </div>
+            <div data-ui="level-goals" class="game-notebook">
+              <ol data-ui="level-goals-list" class="game-goals"></ol>
+            </div>
+            <button data-ui="level-button" data-action="level-button" class="btn" type="button">Далее</button>
+          </section>
+
+          <section data-ui="found-card" class="game-card game-found-card">
+            <div class="game-found-card__content">
+              <img data-ui="found-image" width="132" height="132" alt="">
+              <p data-ui="found-name"></p>
+            </div>
+          </section>
+
+          <section data-ui="game-loading" class="game-card game-loading">
+            <img src="./assets/img/loader.svg" width="96" height="96" alt="">
+            <p>Загружаем карту…</p>
+          </section>
+
+          <section data-ui="map-error" class="game-card game-error">
+            <h2 data-ui="map-error-title">Не удалось загрузить карту</h2>
+            <p data-ui="map-error-message"></p>
+            <button data-ui="retry-button" data-action="retry-button" class="btn" type="button">Повторить загрузку</button>
+          </section>
+        </div>
+      </section>
+
+      <section data-screen="complete" class="is-active">
+        <div class="complete-content">
+          <div class="complete-scene">
+            <img class="complete-img" src="./assets/img/complete-hero.svg" alt="">
+            <div class="left-content"><img src="./assets/img/brand-hero.svg" alt="Петрович и divan.ru"></div>
+          </div>
+          <div class="form-wrapper" data-ui="final-form">
+            <h1 data-ui="complete-title">Отличная работа!<br>Подарки уже ждут вас</h1>
+            <p class="bonus-form-intro">Оставьте свои контакты, чтобы получить бонусы</p>
+
+            <form data-ui="bonus-form" class="bonus-form" novalidate>
+              <div class="bonus-form__body">
+                <fieldset data-ui="bonus-fields" class="bonus-form__fields">
+                  <div class="form-field">
+                    <input data-field="name" name="name" type="text" required autocomplete="name" placeholder="Имя">
+                    <p data-error="name" class="form-field__error is-hidden"></p>
+                  </div>
+                  <div class="form-field">
+                    <input data-field="phone" name="phone" type="tel" required autocomplete="tel" placeholder="Телефон">
+                    <p data-error="phone" class="form-field__error is-hidden"></p>
+                  </div>
+                  <div class="form-field">
+                    <input data-field="birthdate" name="birthdate" type="text" required inputmode="numeric" autocomplete="bday" placeholder="Дата рождения">
+                    <p data-error="birthdate" class="form-field__error is-hidden"></p>
+                  </div>
+                  <div class="form-field">
+                    <input data-field="email" name="email" type="email" required autocomplete="email" placeholder="Email">
+                    <p data-error="email" class="form-field__error is-hidden"></p>
+                  </div>
+                  <div class="form-field form-field--wide">
+                    <input data-field="card" name="card" type="text" required inputmode="numeric" placeholder="№ бонусной карты «Петрович»">
+                    <p data-error="card" class="form-field__error is-hidden"></p>
+                  </div>
+                  <label class="bonus-form__checkbox">
+                    <input data-field="no-card" name="noCard" type="checkbox">
+                    <span>У меня нет бонусной карты «Петрович»</span>
+                  </label>
+                </fieldset>
+                <div data-ui="bonus-loading" class="bonus-form__loading is-hidden">
+                  <img src="./assets/img/loader.svg" width="96" height="96" alt="">
+                </div>
+              </div>
+              <button data-ui="bonus-submit" data-action="bonus-submit" class="btn" type="submit">Отправить</button>
+              <p class="notice">Нажимая на кнопку, вы регистрируетесь в программе лояльности, подписываетесь на маркетинговые коммуникации по СМС и email и подтверждаете, что ознакомлены с <a
+                  href="#">политикой обработки персональных данных ООО «Диван Трейд»</a> и <a href="#">политикой обработки персональных данных ООО «СТД «Петрович»</a>.</p>
+            </form>
+
+            <div class="bonus-success-overlay" data-ui="bonus-success-overlay"></div>
+            <div data-ui="bonus-success" class="bonus-success">
+              <svg class="bonus-success__icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="48" cy="48" r="43" stroke="currentColor" stroke-width="5" />
+                <path d="M28 48L41 61L68 34" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <h2 data-ui="bonus-success-title">Ваши бонусы<br>скоро будут начислены</h2>
+              <button data-ui="bonus-success-close" data-action="bonus-success-close" class="btn" type="button">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+
+</html>
