@@ -222,9 +222,12 @@ export class GameUiManager {
     const level = this.levels[this.renderedLevel];
     const count = this.renderedFound.size;
     const total = level.items.length;
-    this.elements["game-progress"].style.setProperty(
-      "--progress",
-      count / total,
+    const progress = total ? count / total : 0;
+    const progressElement = this.elements["game-progress"];
+    progressElement.style.setProperty("--progress", progress);
+    progressElement.style.setProperty(
+      "--progress-percent",
+      `${progress * 100}%`,
     );
   }
 

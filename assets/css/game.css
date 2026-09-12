@@ -27,7 +27,8 @@
   font-style: italic;
   font-weight: 200;
   font-display: swap;
-  src: url("../fonts/Fira_Sans/FiraSans-ExtraLightItalic.ttf") format("truetype");
+  src: url("../fonts/Fira_Sans/FiraSans-ExtraLightItalic.ttf")
+    format("truetype");
 }
 
 @font-face {
@@ -303,6 +304,8 @@ img {
   display: block;
   max-width: 100%;
   width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
 }
 h1,
 h2,
@@ -923,6 +926,15 @@ button {
   color: var(--clr-text);
 }
 
+.complete-content .left-content img,
+.welcome-hero .brands-logo img {
+  -webkit-filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+.scroll-down {
+  -webkit-filter: drop-shadow(4px 4px 8px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(4px 4px 8px rgba(255, 255, 255, 0.5));
+}
 @media (min-width: 768px) and (max-width: 1199px) {
   .form-wrapper {
     width: 62%;
@@ -1151,11 +1163,8 @@ body.is-game-open {
 .game-hud {
   position: absolute;
   top: var(--game-space);
-  top: max(var(--game-space), env(safe-area-inset-top));
   right: var(--game-space);
-  right: max(var(--game-space), env(safe-area-inset-right));
   left: var(--game-space);
-  left: max(var(--game-space), env(safe-area-inset-left));
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1165,6 +1174,7 @@ body.is-game-open {
 
 .game-progress {
   --progress: 0;
+  --progress-percent: 0%;
   --cat-width: 74px;
   position: relative;
   z-index: 10;
@@ -1180,12 +1190,15 @@ body.is-game-open {
   width: var(--cat-width);
   height: 38px;
   object-fit: contain;
-  transition: left var(--duration-progress) ease-in-out;
+  will-change: left;
+  transition: left var(--duration-progress) ease-out;
   transition-delay: var(--delay-progress);
 }
 
 .game-progress__track {
   position: relative;
+  z-index: 0;
+  isolation: isolate;
   height: 24px;
   overflow: hidden;
   border: 2px solid var(--clr-bg);
@@ -1194,12 +1207,15 @@ body.is-game-open {
 }
 
 .game-progress__fill {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  will-change: width;
+  width: var(--progress-percent);
   background: var(--clr-text-secondary);
-  transform: scaleX(var(--progress));
-  transform-origin: left;
-  transition: transform var(--duration-progress) ease-in-out;
+  transition: width var(--duration-progress) ease-out;
   transition-delay: var(--delay-progress);
 }
 
@@ -1209,7 +1225,8 @@ body.is-game-open {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .game-progress__segments > * {
@@ -1555,7 +1572,7 @@ body.is-game-open {
     height: 48px;
   }
 
-  .game-card {
+  .game-card:not(.game-found-card) {
     border-radius: 0;
   }
 
@@ -1575,6 +1592,11 @@ body.is-game-open {
 
   .game-found-card {
     padding: 0;
+  }
+
+  .game-card.game-level-card {
+    height: 100vh;
+    height: 100dvh;
   }
 }
 
